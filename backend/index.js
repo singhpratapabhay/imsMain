@@ -44,11 +44,11 @@ app.use('/noOfUnit', noOfUnit);
 app.use('/tax', tax);
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 // Catch-all route to handle client-side routing
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
 });
 
 // Start server
